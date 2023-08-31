@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "d"
+git commit -m "permissons"
 git push
