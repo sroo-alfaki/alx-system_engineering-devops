@@ -1,2 +1,2 @@
 #!/bin/bash
-git add . && git commit -m 'Shell, init files, variables and expansions' && git push
+git add . && git commit -m 'Shell files' && git push
