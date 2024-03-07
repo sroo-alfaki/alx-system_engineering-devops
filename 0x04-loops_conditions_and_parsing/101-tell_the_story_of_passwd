@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Today we will make up a story based on it.
+
+exec 3< /etc/passwd
+
+while IFS=":" read -r username _ userid groupid _ homedir shell; do
+  
+  groupname=$(grep -E "^$groupid:" /etc/group | cut -d: -f1)
+  password=$(grep -E "^$username:" /etc/shadow | cut -d: -f2)
+
+  echo "المستخدم $username هو جزء من عصابة $groupid، يعيش في المسار $homedir ويستخدم الأمر/الشيل $shell."
+  echo "مكان مستخدم المعرّف محمي بواسطة الرمز السري $password، مزيد من المعلومات حول المستخدم هنا: معلومات المعرّف."
+done <&3
+
+exec 3<&
