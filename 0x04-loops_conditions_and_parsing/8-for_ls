@@ -2,13 +2,12 @@
 #content of the current directo
 
 for file in *; do
-	if [[ $file == .* ]]; then
-		    continue
-		      fi
-	if [[ $file == *.* ]]; then
-		continue
-	fi
-
-	filename=$(echo "$file" | cut -d '-' -f 2-)
-	echo "- $filename"
+if [[ $file == .* ]]; then
+continue
+fi
+if [[ $file == *.* ]]; then
+continue
+fi
+filename=$(echo "$file" | cut -d '-' -f 2-)
+echo "- $filename"
 done
