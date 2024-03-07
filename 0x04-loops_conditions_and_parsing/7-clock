@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+#displays the time for 12 hours and 59 minutes
+
+hour=0
+minute=1
+counter=1
+
+while [ $counter -le 70 ]
+do
+  printf "%02d:%02d\n" $hour $minute
+
+  ((minute++))
+  if [ $minute -eq 60 ]
+  then
+    ((hour++))
+    minute=0
+  fi
+
+  if [ $hour -eq 13 ]
+  then
+    hour=1
+  fi
+
+  ((counter++))
+done | head -n 70
