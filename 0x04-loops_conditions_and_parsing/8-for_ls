@@ -5,7 +5,7 @@ for file in *; do
 	if [[ $file == .* ]]; then
 		    continue
 		      fi
-	if [[ $file == . ]]; then
+	if [[ $file == *.* ]]; then
 		continue
 	fi
 
