@@ -5,13 +5,13 @@ hour=0
 minute=1
 counter=1
 
+printf "Hour:" $hour\n
 while [ $counter -le 70 ]
 do
-  printf "%02d:%02d\n" $hour $minute
-
+  printf "%d\n" $minute
   ((minute++))
   if [ $minute -eq 60 ]
-  then
+  then  
     ((hour++))
     minute=0
   fi

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#content of the current directory
+
+for file in *; do
+  if [[ $file == .* ]]; then
+    continue
+  fi
+
+  filename=$(echo "$file" | cut -d '-' -f 2-)
+  echo "- $filename"
+done
