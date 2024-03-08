@@ -1,6 +1,4 @@
 #!/bin/env bash
 # Get the current script's PID
 
-pid=$$
-
-echo "$pid"
+echo $$
