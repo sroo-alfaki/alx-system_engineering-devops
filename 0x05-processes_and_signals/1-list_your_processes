@@ -5,4 +5,4 @@ processes=$(ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command)
 
 while IFS= read -r line; do
   echo "$line"
-done <<< "$processes" | head -50
+done <<< "$processes"
