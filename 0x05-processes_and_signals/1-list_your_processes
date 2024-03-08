@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
 # Get the list of all processes
 
-processes=$(ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command)
-
-while IFS= read -r line; do
-  echo "$line"
-done <<< "$processes"
+ps aux --forest
