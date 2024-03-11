@@ -1,13 +1,9 @@
 #!/usr/bin/env bash
 # Highlander
-handle_sigterm() {
-  echo "I am invincible!!!"
-  exit 0
-}
 
-trap handle_sigterm SIGTERM
-
-while "true" do
-  echo "To infinity and beyond indefinitely"
-  sleep 2
-don
+trap 'echo "I am invincible!!!"' SIGTERM
+while :
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
