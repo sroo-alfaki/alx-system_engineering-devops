@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
 # Find the process ID (PID) of the 7-highlander process
 
-pgrep -f  7-highlander | xargs kill -9
+pid=$(pgrep -f 7-highlander)
+
+if [[ -n $pid ]]; then
+	kill "$pid"
+	echo "7-highlander ($pid) has been killed."
+else
+	echo "7-highlander is not running."
+fi
